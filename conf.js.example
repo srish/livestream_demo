@@ -1,3 +1,4 @@
 options = {
-	"channelName":"YOUR_CHANNEL_NAME"
+	"channelName":"YOUR_CHANNEL_NAME",
+	"devKey":"YOUR_DEV_KEY"
 }
