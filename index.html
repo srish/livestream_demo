@@ -1,14 +1,50 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
- 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 <body>
-  <div id="livestreamPlayer">
-  <h1>This page requires flash</h1>
-    <p><a href="http://www.adobe.com/go/getflashplayer">download flash</a></p>
-  </div>
-  <br/>
-  <input type="button" value="switch channel" onclick="javascript:switchChannel();" /> 
+	<div class="container" style="margin-top: 20px;">
+		<div id="livestreamPlayer">
+		  <h1>This page requires flash</h1>
+		    <p><a href="http://www.adobe.com/go/getflashplayer">download flash</a></p>
+		</div>
+
+		<div class="col-lg-12" style="padding: 0px;">
+			<button class="btn btn-default" onclick="javascript:player.startPlayback();">
+				<i class="fa fa-play"></i>
+			</button>
+			<button class="btn btn-default" onclick="javascript:player.pausePlayback();">
+				<i class="fa fa-pause"></i>
+			</button>
+			<button class="btn btn-default" onclick="javascript:player.volumeUp();">
+				<i class="fa fa-volume-up"></i>
+			</button>
+			<button class="btn btn-default" onclick="javascript:player.volumeDown();">
+				<i class="fa fa-volume-down"></i>
+			</button>
+		</div>
+		<br/>
+
+	  	<div class="col-lg-12" style="padding: 0px">
+		  	<div class="col-lg-2" style="padding: 0px">
+		  		<input id="channel-name" class="form-control" style="width: 180px; margin-top: 20px" placeholder="Enter a Channel Name"/>
+		  	</div>
+	  	</div>
+
+	  	<div class="col-lg-12" style="padding: 0px">
+	  		<div class="col-lg-3" style="padding: 0px; ">
+		  		<input id="clip-id" class="form-control" style="width: 180px; margin-top: 10px;" placeholder="Enter a Clip ID (optional)"/>
+		  	</div>
+	  	</div>
+	 
+		<div class="col-lg-12" style="padding: 0px; padding-top: 20px;">
+		  <button class="btn btn-primary btn-lg" onclick="javascript:switchChannel();">Switch Channel</button>
+		</div>
+	</div>
 </body>	
 
-<script type="text/javascript" src="conf.js"></script>
-<script type="text/javascript" src="livestream.js"></script>
+<script type="text/javascript" src="js/conf.js"></script>
+<script type="text/javascript" src="js/livestream.js"></script>
 
